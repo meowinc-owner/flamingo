@@ -126,49 +126,89 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               className="w-32 h-32 mx-auto relative z-10"
               fill="none"
             >
-              <motion.path
-                d="M60 15 Q65 20, 65 25 Q65 30, 60 32 Q55 30, 55 25 Q55 20, 60 15"
+              {/* Body */}
+              <motion.ellipse
+                cx="60"
+                cy="70"
+                rx="16"
+                ry="20"
                 fill="url(#gradient)"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
+                transition={{ delay: 0.1, duration: 0.6 }}
               />
+              {/* Long curved neck */}
               <motion.path
-                d="M60 32 Q62 40, 60 50"
+                d="M65 52 Q72 40, 70 25 Q69 15, 65 10"
                 stroke="url(#gradient)"
-                strokeWidth="3"
+                strokeWidth="4"
+                fill="none"
+                strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+              />
+              {/* Head */}
+              <motion.circle
+                cx="63"
+                cy="8"
+                r="4"
+                fill="url(#gradient)"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+              />
+              {/* Beak */}
+              <motion.path
+                d="M66 7 L78 5 Q80 5, 79 7 L67 9 Z"
+                fill="url(#gradient)"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+              />
+              {/* Left leg */}
+              <motion.path
+                d="M58 88 L56 105"
+                stroke="url(#gradient)"
+                strokeWidth="2"
                 fill="none"
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               />
+              {/* Right leg */}
               <motion.path
-                d="M55 50 Q50 55, 48 65 L42 85 Q40 95, 42 100 M65 50 Q70 55, 72 65 L78 85 Q80 95, 78 100"
+                d="M62 88 L64 105"
                 stroke="url(#gradient)"
-                strokeWidth="2.5"
+                strokeWidth="2"
                 fill="none"
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
+                transition={{ delay: 0.45, duration: 0.8 }}
               />
-              <motion.ellipse
-                cx="60"
-                cy="60"
-                rx="18"
-                ry="22"
-                fill="url(#gradient)"
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-              />
+              {/* Left foot */}
               <motion.path
-                d="M68 58 L78 55 Q82 54, 80 60 L72 62 Q70 60, 68 58"
-                fill="url(#gradient)"
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
+                d="M54 105 L58 105"
+                stroke="url(#gradient)"
+                strokeWidth="1.5"
+                fill="none"
+                strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ delay: 0.7, duration: 0.4 }}
+              />
+              {/* Right foot */}
+              <motion.path
+                d="M62 105 L66 105"
+                stroke="url(#gradient)"
+                strokeWidth="1.5"
+                fill="none"
+                strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ delay: 0.75, duration: 0.4 }}
               />
               <defs>
                 <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
