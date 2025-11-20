@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import { MapPin, AlertTriangle, Info } from 'lucide-react';
 
 // To use your own photos: Replace the 'image' URL with your own image URLs
@@ -79,8 +78,6 @@ const species = [
 ];
 
 export default function SpeciesGrid() {
-  const [selectedSpecies, setSelectedSpecies] = useState<number | null>(null);
-
   return (
     <section id="species" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
@@ -95,7 +92,7 @@ export default function SpeciesGrid() {
             Six Spectacular Species
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Click each card to discover the unique characteristics of all six flamingo species
+            Learn about the unique characteristics of all six flamingo species
           </p>
         </motion.div>
 
@@ -108,8 +105,6 @@ export default function SpeciesGrid() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.03, y: -5 }}
-              onClick={() => setSelectedSpecies(selectedSpecies === index ? null : index)}
-              className="cursor-pointer"
             >
               <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-6 border-2 border-pink-100 shadow-2xl shadow-pink-200/30 h-full transition-all hover:shadow-glow-pink-strong hover:border-pink-300">
                 <div className="w-full h-40 rounded-2xl mb-5 relative overflow-hidden shadow-lg">
@@ -147,20 +142,14 @@ export default function SpeciesGrid() {
                     <span className="text-gray-700 font-medium">{s.status}</span>
                   </div>
 
-                  <motion.div
-                    initial={false}
-                    animate={{ height: selectedSpecies === index ? 'auto' : 0, opacity: selectedSpecies === index ? 1 : 0 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="pt-3 border-t border-pink-200 space-y-2 text-sm">
-                      <p className="text-gray-700"><strong>Size:</strong> {s.size}</p>
-                      <p className="text-gray-700"><strong>Diet:</strong> {s.diet}</p>
-                      <div className="flex items-start gap-2 bg-pink-50 rounded-lg p-2 mt-2">
-                        <Info className="w-4 h-4 text-pink-500 mt-0.5 flex-shrink-0" />
-                        <p className="text-gray-700">{s.fact}</p>
-                      </div>
+                  <div className="pt-3 border-t border-pink-200 space-y-2 text-sm">
+                    <p className="text-gray-700"><strong>Size:</strong> {s.size}</p>
+                    <p className="text-gray-700"><strong>Diet:</strong> {s.diet}</p>
+                    <div className="flex items-start gap-2 bg-pink-50 rounded-lg p-2 mt-2">
+                      <Info className="w-4 h-4 text-pink-500 mt-0.5 flex-shrink-0" />
+                      <p className="text-gray-700">{s.fact}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 </div>
               </div>
             </motion.div>
