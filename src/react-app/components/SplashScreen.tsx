@@ -5,8 +5,32 @@ interface SplashScreenProps {
   onComplete: () => void;
 }
 
+const FUN_FACTS = [
+  "Flamingos are born with gray feathers, not pink!",
+  "A group of flamingos is called a 'flamboyance'",
+  "Flamingos can fly up to 35 miles in a single night",
+  "Flamingos get their pink color from their food",
+  "A flamingo can drink boiling water from hot springs",
+  "Flamingos are filter feeders like whales",
+  "Baby flamingos are called chicks or fluffy chicks",
+  "Flamingos can live up to 50 years in the wild",
+  "Flamingos produce a red milk to feed their young",
+  "Flamingos stand on one leg to conserve body heat",
+  "There are 6 species of flamingos in the world",
+  "Flamingos sleep standing on one leg while flying",
+  "A flamingo's heart is the size of a marble",
+  "Flamingos are extremely social birds",
+  "Flamingos mate for life and are monogamous",
+  "The Andes are home to the rarest flamingo species",
+  "Flamingos communicate through various sounds and displays",
+  "Flamingos can turn their heads 270 degrees",
+  "Lake Nakuru in Kenya has over 2 million flamingos",
+  "Flamingos have special salt glands in their beaks"
+];
+
 export default function SplashScreen({ onComplete }: SplashScreenProps) {
   const [progress, setProgress] = useState(0);
+  const [funFact] = useState(() => FUN_FACTS[Math.floor(Math.random() * FUN_FACTS.length)]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -320,6 +344,15 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               transition={{ duration: 0.1 }}
             />
           </motion.div>
+
+          <motion.p
+            className="mt-8 text-xs text-gray-600 font-medium max-w-xs italic"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.4 }}
+          >
+            💡 {funFact}
+          </motion.p>
 
           <motion.p
             className="mt-4 text-sm text-gray-500 font-medium"
