@@ -44,7 +44,7 @@ export default function SocialBehavior() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gradient-pink">
@@ -66,8 +66,8 @@ export default function SocialBehavior() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.08, duration: 0.4, ease: "easeOut" }}
-                whileHover={{ scale: 1.03, transition: { duration: 0.25 } }}
+                transition={{ delay: index * 0.08, duration: 0.5, ease: "easeOut" }}
+                whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
               >
                 <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 border-2 border-pink-100 shadow-2xl shadow-pink-200/30 h-full hover:border-pink-300 transition-all">
                   <motion.div
@@ -95,7 +95,7 @@ export default function SocialBehavior() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 md:p-12 border-2 border-pink-100 shadow-2xl shadow-pink-200/30"
         >
           <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -115,7 +115,7 @@ export default function SocialBehavior() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.08, duration: 0.4, ease: "easeOut" }}
+                    transition={{ delay: index * 0.08, duration: 0.5, ease: "easeOut" }}
                     className="flex items-start gap-3"
                   >
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">

@@ -48,7 +48,7 @@ export default function FunFacts() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gradient-pink">
@@ -69,13 +69,13 @@ export default function FunFacts() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.08, duration: 0.4, ease: "easeOut" }}
-                whileHover={{ y: -8, transition: { duration: 0.2 } }}
+                transition={{ delay: index * 0.08, duration: 0.5, ease: "easeOut" }}
+                whileHover={{ y: -8, transition: { duration: 0.3 } }}
               >
                 <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 border-2 border-pink-100 shadow-2xl shadow-pink-200/30 h-full group hover:border-pink-300 transition-all">
                   <motion.div
                     className="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center mb-5 shadow-lg"
-                    whileHover={{ scale: 1.15, rotate: 360, transition: { duration: 0.4 } }}
+                    whileHover={{ scale: 1.15, rotate: 360, transition: { duration: 0.5 } }}
                   >
                     <Icon className="w-8 h-8 text-white" />
                   </motion.div>
@@ -100,7 +100,7 @@ export default function FunFacts() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="mt-16 bg-white/95 backdrop-blur-xl rounded-3xl p-8 md:p-12 border-2 border-pink-100 shadow-2xl shadow-pink-200/30"
         >
           <div className="max-w-4xl mx-auto text-center">

@@ -30,14 +30,14 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <motion.div
             id="top"
             className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-md border-2 border-pink-200 rounded-full px-5 py-2.5 mb-8 shadow-xl shadow-pink-200/50"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
+            transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
             whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(244, 114, 182, 0.3)', transition: { duration: 0.2 } }}
           >
             <Sparkles className="w-5 h-5 text-pink-500" />
@@ -48,7 +48,7 @@ export default function Hero() {
             className="text-7xl md:text-9xl font-bold mb-8 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
+            transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
           >
             <span className="inline-block text-gradient-pink">
               Flamingo
@@ -61,7 +61,7 @@ export default function Hero() {
             className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }}
+            transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
           >
             Explore the fascinating world of flamingos through interactive science.
             Discover their unique anatomy, extreme habitats, and remarkable behaviors.
@@ -71,7 +71,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
+            transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
           >
             <motion.button
               onClick={() => {

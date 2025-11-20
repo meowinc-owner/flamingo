@@ -10,7 +10,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <div className="flex items-center gap-2 mb-4">
               <BookOpen className="w-6 h-6" />
@@ -26,7 +26,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
+            transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
           >
             <div className="flex items-center gap-2 mb-4">
               <Users className="w-6 h-6" />
@@ -43,7 +43,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
+            transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
           >
             <div className="flex items-center gap-2 mb-4">
               <Globe className="w-6 h-6" />
@@ -63,7 +63,7 @@ export default function Footer() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             >
               FlamingoLab
             </motion.h2>
