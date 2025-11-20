@@ -7,6 +7,7 @@ import { mochaPlugins } from "@getmocha/vite-plugins";
 export default defineConfig({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   plugins: [...mochaPlugins(process.env as any), react(), cloudflare()],
+  base: '/flamingo/',
   server: {
     host: "0.0.0.0",
     port: 5000,
