@@ -126,23 +126,49 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               className="w-32 h-32 mx-auto relative z-10"
               fill="none"
             >
-              <motion.circle
-                cx="60"
-                cy="60"
-                r="50"
-                stroke="url(#gradient)"
-                strokeWidth="4"
-                fill="none"
-                initial={{ pathLength: 0, rotate: 0 }}
-                animate={{ pathLength: 1, rotate: 360 }}
-                transition={{ duration: 2, ease: "easeInOut", rotate: { duration: 8, repeat: Infinity, ease: "linear" } }}
-              />
               <motion.path
-                d="M60 30 Q55 25, 50 30 L45 50 Q40 55, 45 60 L50 90 Q55 100, 60 90 L60 60 L70 40 Q65 30, 60 30"
+                d="M60 15 Q65 20, 65 25 Q65 30, 60 32 Q55 30, 55 25 Q55 20, 60 15"
                 fill="url(#gradient)"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+              />
+              <motion.path
+                d="M60 32 Q62 40, 60 50"
+                stroke="url(#gradient)"
+                strokeWidth="3"
+                fill="none"
+                strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+              />
+              <motion.path
+                d="M55 50 Q50 55, 48 65 L42 85 Q40 95, 42 100 M65 50 Q70 55, 72 65 L78 85 Q80 95, 78 100"
+                stroke="url(#gradient)"
+                strokeWidth="2.5"
+                fill="none"
+                strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              />
+              <motion.ellipse
+                cx="60"
+                cy="60"
+                rx="18"
+                ry="22"
+                fill="url(#gradient)"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+              />
+              <motion.path
+                d="M68 58 L78 55 Q82 54, 80 60 L72 62 Q70 60, 68 58"
+                fill="url(#gradient)"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
               />
               <defs>
                 <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
