@@ -30,28 +30,39 @@ const FUN_FACTS = [
 
 export default function SplashScreen({ onComplete }: SplashScreenProps) {
   const [progress, setProgress] = useState(0);
+  const [shouldFade, setShouldFade] = useState(false);
   const [funFact] = useState(() => FUN_FACTS[Math.floor(Math.random() * FUN_FACTS.length)]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
-        if (prev >= 100) {
+        const newProgress = prev + 2;
+        if (newProgress >= 85 && !shouldFade) {
+          setShouldFade(true);
+        }
+        if (newProgress >= 100) {
           clearInterval(interval);
-          setTimeout(onComplete, 300);
           return 100;
         }
-        return prev + 2;
+        return newProgress;
       });
     }, 25);
 
     return () => clearInterval(interval);
-  }, [onComplete]);
+  }, [shouldFade]);
+
+  useEffect(() => {
+    if (shouldFade) {
+      const fadeTimeout = setTimeout(onComplete, 500);
+      return () => clearTimeout(fadeTimeout);
+    }
+  }, [shouldFade, onComplete]);
 
   return (
     <motion.div
       className="fixed inset-0 z-[100] flex items-center justify-center bg-gradient-to-br from-pink-50 via-white to-rose-50 overflow-hidden"
       initial={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      animate={{ opacity: shouldFade ? 0 : 1 }}
       transition={{ duration: 0.5 }}
     >
       {/* Animated background elements */}
