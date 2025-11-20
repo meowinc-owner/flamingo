@@ -7,6 +7,12 @@ interface SplashScreenProps {
 
 export default function SplashScreen({ onComplete }: SplashScreenProps) {
   const [progress, setProgress] = useState(0);
+  const [particles] = useState(Array.from({ length: 12 }, (_, i) => ({
+    id: i,
+    left: Math.random() * 100,
+    delay: Math.random() * 0.5,
+    duration: 2 + Math.random() * 1,
+  })));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,6 +36,25 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      {/* Floating particles */}
+      {particles.map((particle) => (
+        <motion.div
+          key={particle.id}
+          className="absolute w-1 h-1 bg-pink-400 rounded-full"
+          style={{ left: `${particle.left}%`, top: 0 }}
+          animate={{
+            y: ['0vh', '100vh'],
+            opacity: [0, 1, 1, 0],
+            x: [0, (Math.random() - 0.5) * 50],
+          }}
+          transition={{
+            duration: particle.duration,
+            delay: particle.delay,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+        />
+      ))}
       {/* Animated background elements */}
       <motion.div
         className="absolute -inset-32 bg-gradient-to-r from-pink-200 to-rose-200 rounded-full blur-3xl opacity-20"
@@ -83,6 +108,19 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           style={{ willChange: 'transform' }}
         />
         
+        {/* Additional glow layer for more polish */}
+        <motion.div
+          className="absolute -inset-32 bg-gradient-to-r from-pink-200/50 to-rose-200/50 rounded-full blur-2xl opacity-20"
+          animate={{
+            scale: [1, 1.15, 1],
+          }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
         <div className="relative z-10 text-center">
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
@@ -93,11 +131,24 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               damping: 20,
               duration: 0.8
             }}
-            className="mb-8"
+            className="mb-8 relative"
           >
+            {/* Glow effect around logo */}
+            <motion.div
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400/30 to-rose-400/30 blur-xl"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 1, 0.5],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
             <svg
               viewBox="0 0 120 120"
-              className="w-32 h-32 mx-auto"
+              className="w-32 h-32 mx-auto relative z-10"
               fill="none"
             >
               <motion.circle
@@ -214,13 +265,13 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           </motion.h1>
 
           <motion.div
-            className="w-64 h-2 bg-pink-100 rounded-full overflow-hidden mx-auto"
+            className="w-64 h-2 bg-pink-100 rounded-full overflow-hidden mx-auto shadow-lg shadow-pink-200/50"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1, duration: 0.4 }}
           >
             <motion.div
-              className="h-full bg-gradient-to-r from-pink-500 via-pink-600 to-rose-600 rounded-full"
+              className="h-full bg-gradient-to-r from-pink-500 via-pink-600 to-rose-600 rounded-full shadow-lg shadow-pink-500/50"
               style={{
                 width: `${progress}%`,
                 willChange: 'width'
