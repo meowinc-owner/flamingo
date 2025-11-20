@@ -6,6 +6,12 @@ This is a FlamingoLab app - a React-based web application about flamingos, featu
 **Current State**: Imported from GitHub and configured for Replit environment. The app is a single-page application with React 19, Vite, TypeScript, and Tailwind CSS.
 
 ## Recent Changes
+- **2025-11-20**: Major performance optimizations - eliminated lag at top of page
+  - Drastically reduced Hero section animations from 4 to 1 animated blob (75% reduction)
+  - Converted 2 background blobs to static (no animation overhead)
+  - Removed continuous animations: sparkles rotation, text glow, button shimmer, bouncing chevron
+  - Reduced blob sizes from 600px to 400-500px for better performance
+  
 - **2025-11-20**: Performance optimizations and splash screen addition
   - Added sleek splash screen with flamingo logo animation that appears on every page load
   - Optimized all animations with GPU acceleration for smoother performance
