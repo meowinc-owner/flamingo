@@ -156,10 +156,12 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 ease: "easeInOut"
               }}
             />
-            <svg
+            <motion.svg
               viewBox="0 0 120 120"
               className="w-32 h-32 mx-auto relative z-10"
               fill="none"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             >
               {/* Body */}
               <motion.ellipse
@@ -252,7 +254,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                   <stop offset="100%" stopColor="#be185d" />
                 </linearGradient>
               </defs>
-            </svg>
+            </motion.svg>
           </motion.div>
 
           <motion.h2
