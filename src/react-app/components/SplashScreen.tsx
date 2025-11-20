@@ -135,77 +135,77 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             transition={{ delay: 0.8, duration: 0.6 }}
           >
             <motion.span
-              display="inline-block"
+              style={{ display: "inline-block" }}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.1 }}
             >
               F
             </motion.span>
             <motion.span
-              display="inline-block"
+              style={{ display: "inline-block" }}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.15 }}
             >
               l
             </motion.span>
             <motion.span
-              display="inline-block"
+              style={{ display: "inline-block" }}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
             >
               a
             </motion.span>
             <motion.span
-              display="inline-block"
+              style={{ display: "inline-block" }}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.25 }}
             >
               m
             </motion.span>
             <motion.span
-              display="inline-block"
+              style={{ display: "inline-block" }}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
             >
               i
             </motion.span>
             <motion.span
-              display="inline-block"
+              style={{ display: "inline-block" }}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.35 }}
             >
               n
             </motion.span>
             <motion.span
-              display="inline-block"
+              style={{ display: "inline-block" }}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
             >
               g
             </motion.span>
             <motion.span
-              display="inline-block"
+              style={{ display: "inline-block" }}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.45 }}
             >
               o
             </motion.span>
             <motion.span
-              display="inline-block"
+              style={{ display: "inline-block" }}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
             >
               L
             </motion.span>
             <motion.span
-              display="inline-block"
+              style={{ display: "inline-block" }}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.55 }}
             >
               a
             </motion.span>
             <motion.span
-              display="inline-block"
+              style={{ display: "inline-block" }}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
             >

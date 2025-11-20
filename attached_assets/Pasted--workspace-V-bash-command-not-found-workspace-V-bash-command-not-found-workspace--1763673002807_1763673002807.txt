@@ -1,0 +1,107 @@
+~/workspace$ ^V
+bash: : command not found
+~/workspace$ ^V
+bash: : command not found
+~/workspace$ git remote set-url origin https://x-access-token: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@github.com/meowinc-owner/flamingo.git
+~/workspace$ git push origin main
+remote: Permission to meowinc-owner/flamingo.git denied to meowinc-owner.
+fatal: unable to access 'https://github.com/meowinc-owner/flamingo.git/': The requested URL returned error: 403
+~/workspace$ git remote set-url origin https://x-access-token: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@github.com/meowinc-owner/flamingo.git
+~/workspace$ git push origin main
+Enumerating objects: 64, done.
+Counting objects: 100% (64/64), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (53/53), done.
+Writing objects: 100% (53/53), 112.49 KiB | 8.65 MiB/s, done.
+Total 53 (delta 39), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (39/39), completed with 8 local objects.
+To https://github.com/meowinc-owner/flamingo.git
+   c774ef6..82d71c5  main -> main
+~/workspace$ npm run deploy
+
+> mocha-app@0.0.0 predeploy
+> npm run build
+
+
+> mocha-app@0.0.0 build
+> tsc -b && vite build
+
+src/react-app/components/SplashScreen.tsx:138:15 - error TS2322: Type '{ children: string; display: string; animate: { y: number[]; }; transition: { duration: number; repeat: number; ease: "easeInOut"; delay: number; }; }' is not assignable to type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+  Property 'display' does not exist on type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+
+138               display="inline-block"
+                  ~~~~~~~
+
+src/react-app/components/SplashScreen.tsx:145:15 - error TS2322: Type '{ children: string; display: string; animate: { y: number[]; }; transition: { duration: number; repeat: number; ease: "easeInOut"; delay: number; }; }' is not assignable to type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+  Property 'display' does not exist on type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+
+145               display="inline-block"
+                  ~~~~~~~
+
+src/react-app/components/SplashScreen.tsx:152:15 - error TS2322: Type '{ children: string; display: string; animate: { y: number[]; }; transition: { duration: number; repeat: number; ease: "easeInOut"; delay: number; }; }' is not assignable to type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+  Property 'display' does not exist on type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+
+152               display="inline-block"
+                  ~~~~~~~
+
+src/react-app/components/SplashScreen.tsx:159:15 - error TS2322: Type '{ children: string; display: string; animate: { y: number[]; }; transition: { duration: number; repeat: number; ease: "easeInOut"; delay: number; }; }' is not assignable to type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+  Property 'display' does not exist on type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+
+159               display="inline-block"
+                  ~~~~~~~
+
+src/react-app/components/SplashScreen.tsx:166:15 - error TS2322: Type '{ children: string; display: string; animate: { y: number[]; }; transition: { duration: number; repeat: number; ease: "easeInOut"; delay: number; }; }' is not assignable to type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+  Property 'display' does not exist on type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+
+166               display="inline-block"
+                  ~~~~~~~
+
+src/react-app/components/SplashScreen.tsx:173:15 - error TS2322: Type '{ children: string; display: string; animate: { y: number[]; }; transition: { duration: number; repeat: number; ease: "easeInOut"; delay: number; }; }' is not assignable to type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+  Property 'display' does not exist on type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+
+173               display="inline-block"
+                  ~~~~~~~
+
+src/react-app/components/SplashScreen.tsx:180:15 - error TS2322: Type '{ children: string; display: string; animate: { y: number[]; }; transition: { duration: number; repeat: number; ease: "easeInOut"; delay: number; }; }' is not assignable to type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+  Property 'display' does not exist on type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+
+180               display="inline-block"
+                  ~~~~~~~
+
+src/react-app/components/SplashScreen.tsx:187:15 - error TS2322: Type '{ children: string; display: string; animate: { y: number[]; }; transition: { duration: number; repeat: number; ease: "easeInOut"; delay: number; }; }' is not assignable to type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+  Property 'display' does not exist on type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+
+187               display="inline-block"
+                  ~~~~~~~
+
+src/react-app/components/SplashScreen.tsx:194:15 - error TS2322: Type '{ children: string; display: string; animate: { y: number[]; }; transition: { duration: number; repeat: number; ease: "easeInOut"; delay: number; }; }' is not assignable to type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+  Property 'display' does not exist on type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+
+194               display="inline-block"
+                  ~~~~~~~
+
+src/react-app/components/SplashScreen.tsx:201:15 - error TS2322: Type '{ children: string; display: string; animate: { y: number[]; }; transition: { duration: number; repeat: number; ease: "easeInOut"; delay: number; }; }' is not assignable to type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+  Property 'display' does not exist on type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+
+201               display="inline-block"
+                  ~~~~~~~
+
+src/react-app/components/SplashScreen.tsx:208:15 - error TS2322: Type '{ children: string; display: string; animate: { y: number[]; }; transition: { duration: number; repeat: number; ease: "easeInOut"; delay: number; }; }' is not assignable to type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+  Property 'display' does not exist on type 'IntrinsicAttributes & Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLSpanElement>'.
+
+208               display="inline-block"
+                  ~~~~~~~
+
+error TS2688: Cannot find type definition file for './worker-configuration.d.ts'.
+  The file is in the program because:
+    Entry point of type library './worker-configuration.d.ts' specified in compilerOptions
+
+  tsconfig.worker.json:5:30
+    5     "types": ["vite/client", "./worker-configuration.d.ts"],
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File is entry point of type library specified here.
+
+
+Found 12 errors.
+
+~/workspace$ 
