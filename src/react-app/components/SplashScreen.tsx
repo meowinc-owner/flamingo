@@ -36,7 +36,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
-        const jitter = (Math.random() - 0.5) * 1.5;
+        const jitter = (Math.random() - 0.5) * 0.6;
         const newProgress = prev + 2 + jitter;
         if (newProgress >= 85 && !shouldFade) {
           setShouldFade(true);
@@ -74,19 +74,19 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           rotate: [0, 360],
         }}
         transition={{
-          duration: 4,
+          duration: 6,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "linear"
         }}
       />
       <motion.div
         className="absolute top-10 left-20 w-32 h-32 bg-gradient-to-r from-pink-300 to-pink-400 rounded-full blur-2xl opacity-25"
         animate={{
-          y: [0, 30, 0],
-          x: [0, 20, 0],
+          y: [0, 20, 0],
+          x: [0, 15, 0],
         }}
         transition={{
-          duration: 3,
+          duration: 4,
           repeat: Infinity,
           ease: "easeInOut"
         }}
@@ -94,11 +94,11 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       <motion.div
         className="absolute bottom-10 right-20 w-32 h-32 bg-gradient-to-r from-rose-300 to-rose-400 rounded-full blur-2xl opacity-25"
         animate={{
-          y: [0, -30, 0],
-          x: [0, -20, 0],
+          y: [0, -20, 0],
+          x: [0, -15, 0],
         }}
         transition={{
-          duration: 4,
+          duration: 5,
           repeat: Infinity,
           ease: "easeInOut"
         }}
@@ -108,13 +108,13 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         <motion.div
           className="absolute -inset-20 bg-gradient-to-r from-pink-300 to-rose-300 rounded-full blur-3xl opacity-30"
           animate={{
-            scale: [1, 1.2, 1],
+            scale: [1, 1.15, 1],
             rotate: [0, 180, 360],
           }}
           transition={{
-            duration: 3,
+            duration: 4,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "linear"
           }}
           style={{ willChange: 'transform' }}
         />
@@ -123,10 +123,10 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         <motion.div
           className="absolute -inset-32 bg-gradient-to-r from-pink-200/50 to-rose-200/50 rounded-full blur-2xl opacity-20"
           animate={{
-            scale: [1, 1.15, 1],
+            scale: [1, 1.2, 1],
           }}
           transition={{
-            duration: 2.5,
+            duration: 3,
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -134,13 +134,11 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         
         <div className="relative z-10 text-center">
           <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
             transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 20,
-              duration: 0.8
+              duration: 0.6,
+              ease: "easeOut"
             }}
             className="mb-8 relative"
           >
@@ -148,11 +146,11 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             <motion.div
               className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400/30 to-rose-400/30 blur-xl"
               animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.5, 1, 0.5],
+                scale: [1, 1.15, 1],
+                opacity: [0.4, 0.8, 0.4],
               }}
               transition={{
-                duration: 3,
+                duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
@@ -171,7 +169,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 fill="url(#gradient)"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.13, duration: 0.78 }}
+                transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
               />
               {/* Long curved neck */}
               <motion.path
@@ -182,7 +180,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ delay: 0.39, duration: 1.04 }}
+                transition={{ delay: 0.4, duration: 0.6, ease: "easeInOut" }}
               />
               {/* Head */}
               <motion.circle
@@ -192,7 +190,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 fill="url(#gradient)"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.65, duration: 0.65 }}
+                transition={{ delay: 0.7, duration: 0.4, ease: "easeOut" }}
               />
               {/* Beak */}
               <motion.path
@@ -200,7 +198,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 fill="url(#gradient)"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.78, duration: 0.65 }}
+                transition={{ delay: 0.85, duration: 0.4, ease: "easeOut" }}
               />
               {/* Left leg */}
               <motion.path
@@ -211,7 +209,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ delay: 0.52, duration: 1.04 }}
+                transition={{ delay: 0.6, duration: 0.55, ease: "easeInOut" }}
               />
               {/* Right leg */}
               <motion.path
@@ -222,7 +220,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ delay: 0.585, duration: 1.04 }}
+                transition={{ delay: 0.65, duration: 0.55, ease: "easeInOut" }}
               />
               {/* Left foot */}
               <motion.path
@@ -233,7 +231,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ delay: 0.91, duration: 0.52 }}
+                transition={{ delay: 0.95, duration: 0.35, ease: "easeOut" }}
               />
               {/* Right foot */}
               <motion.path
@@ -244,7 +242,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ delay: 0.975, duration: 0.52 }}
+                transition={{ delay: 1.0, duration: 0.35, ease: "easeOut" }}
               />
               <defs>
                 <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -260,7 +258,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             className="text-3xl font-bold text-gradient-pink mb-0"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.5 }}
+            transition={{ delay: 0.8, duration: 0.4, ease: "easeOut" }}
           >
             FlamingoLab
           </motion.h2>
@@ -354,7 +352,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             className="w-64 h-2 bg-pink-100 rounded-full overflow-hidden mx-auto shadow-lg shadow-pink-200/50"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.4 }}
+            transition={{ delay: 1, duration: 0.3, ease: "easeOut" }}
           >
             <motion.div
               className="h-full bg-gradient-to-r from-pink-500 via-pink-600 to-rose-600 rounded-full shadow-lg shadow-pink-500/50"
@@ -362,7 +360,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 width: `${progress}%`,
                 willChange: 'width'
               }}
-              transition={{ duration: 0.1 }}
+              transition={{ duration: 0.15, ease: "easeOut" }}
             />
           </motion.div>
 
@@ -370,7 +368,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             className="mt-8 text-xs text-gray-600 font-medium max-w-xs italic"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.4 }}
+            transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
           >
             💡 {funFact}
           </motion.p>
@@ -379,7 +377,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             className="mt-4 text-sm text-gray-500 font-medium"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.4 }}
+            transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
           >
             <motion.span
               animate={{ opacity: [1, 0.5, 1] }}
