@@ -15,7 +15,7 @@ export default function App() {
         )}
       </AnimatePresence>
       
-      <Router>
+      <Router basename="/flamingo/">
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
