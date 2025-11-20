@@ -33,6 +33,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <motion.div
+            id="top"
             className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-md border-2 border-pink-200 rounded-full px-5 py-2.5 mb-8 shadow-xl shadow-pink-200/50"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

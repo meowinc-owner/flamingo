@@ -1,11 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import HomePage from "@/react-app/pages/Home";
 import SplashScreen from "@/react-app/components/SplashScreen";
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    if (!showSplash) {
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'auto' });
+      }
+    }
+  }, [showSplash]);
 
   return (
     <>
