@@ -7,8 +7,8 @@ export default function Hero() {
       {/* Animated background elements - Optimized for performance */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Static background blobs - no animation */}
-        <div className="absolute top-20 left-10 w-[500px] h-[500px] bg-gradient-to-br from-pink-300 to-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
-        <div className="absolute -bottom-20 left-1/3 w-[500px] h-[500px] bg-gradient-to-br from-pink-400 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-25" />
+        <div className="absolute -top-32 -left-32 w-[700px] h-[700px] bg-gradient-to-br from-pink-300 to-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
+        <div className="absolute -bottom-40 left-1/4 w-[700px] h-[700px] bg-gradient-to-br from-pink-400 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-25" />
         
         {/* Single subtle animated blob */}
         <motion.div
