@@ -10,14 +10,23 @@
   scroll-behavior: smooth;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #fff1f2 0%, #ffffff 50%, #fef2f2 100%);
-  min-height: 100vh;
-  overflow-x: hidden;
+  height: 100vh;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 .scaled-content {
