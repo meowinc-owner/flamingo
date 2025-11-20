@@ -46,7 +46,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         }
         return newProgress;
       });
-    }, 25);
+    }, 30);
 
     return () => clearInterval(interval);
   }, [shouldFade]);
@@ -360,7 +360,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             className="mt-8 text-xs text-gray-600 font-medium max-w-xs italic"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.4 }}
+            transition={{ delay: 0.5, duration: 0.4 }}
           >
             💡 {funFact}
           </motion.p>
@@ -369,7 +369,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             className="mt-4 text-sm text-gray-500 font-medium"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.4 }}
+            transition={{ delay: 0.5, duration: 0.4 }}
           >
             <motion.span
               animate={{ opacity: [1, 0.5, 1] }}
