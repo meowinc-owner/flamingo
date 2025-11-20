@@ -256,7 +256,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           </motion.div>
 
           <motion.h2
-            className="text-3xl font-bold text-gradient-pink mb-6"
+            className="text-3xl font-bold text-gradient-pink mb-1"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.5 }}
