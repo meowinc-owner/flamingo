@@ -7,12 +7,6 @@ interface SplashScreenProps {
 
 export default function SplashScreen({ onComplete }: SplashScreenProps) {
   const [progress, setProgress] = useState(0);
-  const [particles] = useState(Array.from({ length: 12 }, (_, i) => ({
-    id: i,
-    left: Math.random() * 100,
-    delay: Math.random() * 0.5,
-    duration: 2 + Math.random() * 1,
-  })));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,25 +30,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Floating particles */}
-      {particles.map((particle) => (
-        <motion.div
-          key={particle.id}
-          className="absolute w-1 h-1 bg-pink-400 rounded-full"
-          style={{ left: `${particle.left}%`, top: 0 }}
-          animate={{
-            y: ['0vh', '100vh'],
-            opacity: [0, 1, 1, 0],
-            x: [0, (Math.random() - 0.5) * 50],
-          }}
-          transition={{
-            duration: particle.duration,
-            delay: particle.delay,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-      ))}
       {/* Animated background elements */}
       <motion.div
         className="absolute -inset-32 bg-gradient-to-r from-pink-200 to-rose-200 rounded-full blur-3xl opacity-20"
