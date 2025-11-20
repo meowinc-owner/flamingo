@@ -25,6 +25,7 @@ body {
   transform-origin: top center;
   width: 125%;
   margin-left: -12.5%;
+  height: auto;
 }
 
 .will-change-transform {
