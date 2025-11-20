@@ -6,12 +6,32 @@
   font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #fff1f2 0%, #ffffff 50%, #fef2f2 100%);
   min-height: 100vh;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 h1, h2, h3, h4, h5, h6 {

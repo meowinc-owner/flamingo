@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 w-[600px] h-[600px] bg-gradient-to-br from-pink-300 to-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-40"
+          className="absolute top-20 left-10 w-[600px] h-[600px] bg-gradient-to-br from-pink-300 to-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-40 gpu-accelerated"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -18,9 +18,10 @@ export default function Hero() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
+          style={{ willChange: 'transform' }}
         />
         <motion.div
-          className="absolute top-40 right-20 w-[600px] h-[600px] bg-gradient-to-br from-rose-300 to-rose-400 rounded-full mix-blend-multiply filter blur-3xl opacity-40"
+          className="absolute top-40 right-20 w-[600px] h-[600px] bg-gradient-to-br from-rose-300 to-rose-400 rounded-full mix-blend-multiply filter blur-3xl opacity-40 gpu-accelerated"
           animate={{
             scale: [1, 1.3, 1],
             x: [0, -40, 0],
@@ -31,9 +32,10 @@ export default function Hero() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
+          style={{ willChange: 'transform' }}
         />
         <motion.div
-          className="absolute -bottom-20 left-1/3 w-[600px] h-[600px] bg-gradient-to-br from-pink-400 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
+          className="absolute -bottom-20 left-1/3 w-[600px] h-[600px] bg-gradient-to-br from-pink-400 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 gpu-accelerated"
           animate={{
             scale: [1, 1.1, 1],
             x: [0, 60, 0],
@@ -43,9 +45,10 @@ export default function Hero() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
+          style={{ willChange: 'transform' }}
         />
         <motion.div
-          className="absolute bottom-40 right-40 w-[400px] h-[400px] bg-gradient-to-br from-orange-300 to-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-25"
+          className="absolute bottom-40 right-40 w-[400px] h-[400px] bg-gradient-to-br from-orange-300 to-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-25 gpu-accelerated"
           animate={{
             scale: [1, 1.15, 1],
             x: [0, -30, 0],
@@ -56,6 +59,7 @@ export default function Hero() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
+          style={{ willChange: 'transform' }}
         />
       </div>
 

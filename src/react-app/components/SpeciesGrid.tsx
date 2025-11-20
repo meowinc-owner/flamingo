@@ -14,7 +14,7 @@ const species = [
     size: 'Largest species',
     diet: 'Crustaceans, mollusks, larvae',
     fact: 'Most widespread flamingo species',
-    image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop'
+    image: 'https://a-z-animals.com/media/2018/09/Flamingo-standing-on-one-leg.jpg'
   },
   {
     name: 'American Flamingo',
@@ -26,7 +26,7 @@ const species = [
     size: 'Large',
     diet: 'Algae, shrimp, mollusks',
     fact: 'Deepest crimson coloration',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop'
+    image: 'https://www.allaboutbirds.org/guide/assets/og/622776602-1200px.jpg'
   },
   {
     name: 'Chilean Flamingo',
@@ -38,7 +38,7 @@ const species = [
     size: 'Large',
     diet: 'Algae, invertebrates',
     fact: 'Gray legs with pink joints',
-    image: 'https://images.unsplash.com/photo-1568454537842-d933259bb258?w=800&h=600&fit=crop'
+    image: 'https://www.patagonjournal.com/images/stories/fe03-487-flamingos.jpg'
   },
   {
     name: 'Lesser Flamingo',
@@ -50,7 +50,7 @@ const species = [
     size: 'Smallest species',
     diet: 'Microscopic algae (Spirulina)',
     fact: 'Most specialized filter feeder',
-    image: 'https://images.unsplash.com/photo-1551244072-c6f20e29127a?w=800&h=600&fit=crop'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/3/37/Flock_of_Lesser_Flamingo_along_with_juvenile_near_Jamnagar_railway_stationDSCN1798_1.jpg'
   },
   {
     name: 'Andean Flamingo',
@@ -62,7 +62,7 @@ const species = [
     size: 'Medium-large',
     diet: 'Diatoms, algae',
     fact: 'Rarest flamingo species',
-    image: 'https://images.unsplash.com/photo-1597844661991-c669ad22bbe2?w=800&h=600&fit=crop'
+    image: 'https://news.iu.edu/live/image/gid/2/width/1000/height/667/11299_Ossian_Lindholm_A71_0685.rev.1709588022.jpg'
   },
   {
     name: "James's Flamingo",
@@ -74,7 +74,7 @@ const species = [
     size: 'Small-medium',
     diet: 'Diatoms, algae',
     fact: 'Thought extinct until 1957',
-    image: 'https://images.unsplash.com/photo-1580048915913-4f8f5cb481c4?w=800&h=600&fit=crop'
+    image: 'https://www.mediamatic.net/image/2016/12/15/james_s_flamingo_mating_ritual.jpg%28mediaclass-full-width.c3083fedae46a95f1139ff9d5833b1b6b8e20a69%29.jpg'
   }
 ];
 

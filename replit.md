@@ -6,6 +6,14 @@ This is a FlamingoLab app - a React-based web application about flamingos, featu
 **Current State**: Imported from GitHub and configured for Replit environment. The app is a single-page application with React 19, Vite, TypeScript, and Tailwind CSS.
 
 ## Recent Changes
+- **2025-11-20**: Performance optimizations and splash screen addition
+  - Added sleek splash screen with flamingo logo animation that appears on every page load
+  - Optimized all animations with GPU acceleration for smoother performance
+  - Implemented throttled scroll listeners using requestAnimationFrame
+  - Added CSS smooth scrolling and performance optimizations
+  - Removed scroll lag through passive event listeners
+  - Cleaned up redundant will-change properties
+
 - **2025-11-20**: Initial GitHub import and Replit setup
   - Fixed Vite version compatibility (downgraded from 7.x to 6.x)
   - Configured Vite to bind to 0.0.0.0:5000 for Replit
