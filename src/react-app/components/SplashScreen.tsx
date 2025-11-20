@@ -255,6 +255,15 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             </svg>
           </motion.div>
 
+          <motion.h2
+            className="text-3xl font-bold text-gradient-pink mb-6"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.5 }}
+          >
+            FlamingoLab
+          </motion.h2>
+
           <motion.h1
             className="text-5xl font-bold text-gradient-pink mb-4"
             initial={{ opacity: 0, y: 20 }}
