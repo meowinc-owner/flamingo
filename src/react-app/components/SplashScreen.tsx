@@ -36,7 +36,8 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
-        const newProgress = prev + 2;
+        const jitter = (Math.random() - 0.5) * 1.5;
+        const newProgress = prev + 2 + jitter;
         if (newProgress >= 85 && !shouldFade) {
           setShouldFade(true);
         }
@@ -44,7 +45,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           clearInterval(interval);
           return 100;
         }
-        return newProgress;
+        return Math.max(prev, newProgress);
       });
     }, 30);
 
@@ -170,7 +171,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 fill="url(#gradient)"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.1, duration: 0.6 }}
+                transition={{ delay: 0.13, duration: 0.78 }}
               />
               {/* Long curved neck */}
               <motion.path
@@ -181,7 +182,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
+                transition={{ delay: 0.39, duration: 1.04 }}
               />
               {/* Head */}
               <motion.circle
@@ -191,7 +192,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 fill="url(#gradient)"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                transition={{ delay: 0.65, duration: 0.65 }}
               />
               {/* Beak */}
               <motion.path
@@ -199,7 +200,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 fill="url(#gradient)"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
+                transition={{ delay: 0.78, duration: 0.65 }}
               />
               {/* Left leg */}
               <motion.path
@@ -210,7 +211,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
+                transition={{ delay: 0.52, duration: 1.04 }}
               />
               {/* Right leg */}
               <motion.path
@@ -221,7 +222,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ delay: 0.45, duration: 0.8 }}
+                transition={{ delay: 0.585, duration: 1.04 }}
               />
               {/* Left foot */}
               <motion.path
@@ -232,7 +233,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ delay: 0.7, duration: 0.4 }}
+                transition={{ delay: 0.91, duration: 0.52 }}
               />
               {/* Right foot */}
               <motion.path
@@ -243,7 +244,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ delay: 0.75, duration: 0.4 }}
+                transition={{ delay: 0.975, duration: 0.52 }}
               />
               <defs>
                 <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
