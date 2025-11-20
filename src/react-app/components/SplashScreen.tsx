@@ -25,12 +25,50 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
   return (
     <motion.div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-gradient-to-br from-pink-50 via-white to-rose-50"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-gradient-to-br from-pink-50 via-white to-rose-50 overflow-hidden"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="relative">
+      {/* Animated background elements */}
+      <motion.div
+        className="absolute -inset-32 bg-gradient-to-r from-pink-200 to-rose-200 rounded-full blur-3xl opacity-20"
+        animate={{
+          scale: [1, 1.3, 1],
+          rotate: [0, 360],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      <motion.div
+        className="absolute top-10 left-20 w-32 h-32 bg-gradient-to-r from-pink-300 to-pink-400 rounded-full blur-2xl opacity-25"
+        animate={{
+          y: [0, 30, 0],
+          x: [0, 20, 0],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      <motion.div
+        className="absolute bottom-10 right-20 w-32 h-32 bg-gradient-to-r from-rose-300 to-rose-400 rounded-full blur-2xl opacity-25"
+        animate={{
+          y: [0, -30, 0],
+          x: [0, -20, 0],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      
+      <div className="relative z-10">
         <motion.div
           className="absolute -inset-20 bg-gradient-to-r from-pink-300 to-rose-300 rounded-full blur-3xl opacity-30"
           animate={{
@@ -69,9 +107,9 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
                 stroke="url(#gradient)"
                 strokeWidth="4"
                 fill="none"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                initial={{ pathLength: 0, rotate: 0 }}
+                animate={{ pathLength: 1, rotate: 360 }}
+                transition={{ duration: 2, ease: "easeInOut", rotate: { duration: 8, repeat: Infinity, ease: "linear" } }}
               />
               <motion.path
                 d="M60 30 Q55 25, 50 30 L45 50 Q40 55, 45 60 L50 90 Q55 100, 60 90 L60 60 L70 40 Q65 30, 60 30"
@@ -96,7 +134,83 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
           >
-            FlamingoLab
+            <motion.span
+              display="inline-block"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.1 }}
+            >
+              F
+            </motion.span>
+            <motion.span
+              display="inline-block"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.15 }}
+            >
+              l
+            </motion.span>
+            <motion.span
+              display="inline-block"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
+            >
+              a
+            </motion.span>
+            <motion.span
+              display="inline-block"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.25 }}
+            >
+              m
+            </motion.span>
+            <motion.span
+              display="inline-block"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+            >
+              i
+            </motion.span>
+            <motion.span
+              display="inline-block"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.35 }}
+            >
+              n
+            </motion.span>
+            <motion.span
+              display="inline-block"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+            >
+              g
+            </motion.span>
+            <motion.span
+              display="inline-block"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.45 }}
+            >
+              o
+            </motion.span>
+            <motion.span
+              display="inline-block"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            >
+              L
+            </motion.span>
+            <motion.span
+              display="inline-block"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.55 }}
+            >
+              a
+            </motion.span>
+            <motion.span
+              display="inline-block"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+            >
+              b
+            </motion.span>
           </motion.h1>
 
           <motion.div
@@ -121,7 +235,30 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.4 }}
           >
-            Loading interactive science...
+            <motion.span
+              animate={{ opacity: [1, 0.5, 1] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              Loading interactive science
+            </motion.span>
+            <motion.span
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
+            >
+              .
+            </motion.span>
+            <motion.span
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+            >
+              .
+            </motion.span>
+            <motion.span
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+            >
+              .
+            </motion.span>
           </motion.p>
         </div>
       </div>

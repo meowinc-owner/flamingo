@@ -76,11 +76,16 @@ export default function Hero() {
               onClick={() => {
                 document.getElementById('species')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-10 py-5 bg-gradient-to-r from-pink-500 via-pink-600 to-rose-600 text-white rounded-full font-bold text-lg shadow-2xl shadow-pink-500/50"
+              className="group relative px-10 py-5 bg-gradient-to-r from-pink-500 via-pink-600 to-rose-600 text-white rounded-full font-bold text-lg shadow-2xl shadow-pink-500/50 overflow-hidden"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              Start Exploring
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0"
+                animate={{ x: ['-100%', '200%'] }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+              />
+              <span className="relative z-10">Start Exploring</span>
             </motion.button>
             
             <motion.button
