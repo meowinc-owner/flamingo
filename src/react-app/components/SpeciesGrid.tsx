@@ -85,7 +85,7 @@ export default function SpeciesGrid() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gradient-pink">
@@ -103,8 +103,8 @@ export default function SpeciesGrid() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.03, y: -5 }}
+              transition={{ delay: index * 0.08, duration: 0.4, ease: "easeOut" }}
+              whileHover={{ scale: 1.03, y: -5, transition: { duration: 0.25 } }}
             >
               <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-6 border-2 border-pink-100 shadow-2xl shadow-pink-200/30 h-full transition-all hover:shadow-glow-pink-strong hover:border-pink-300">
                 <div className="w-full h-40 rounded-2xl mb-5 relative overflow-hidden shadow-lg">
@@ -122,8 +122,8 @@ export default function SpeciesGrid() {
                   <div className="absolute top-4 right-4">
                     <motion.div 
                       className={`${s.statusColor} w-4 h-4 rounded-full shadow-lg ring-2 ring-white`}
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity }}
+                      animate={{ scale: [1, 1.15, 1] }}
+                      transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                     />
                   </div>
                 </div>

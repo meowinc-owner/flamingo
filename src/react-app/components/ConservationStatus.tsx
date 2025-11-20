@@ -46,6 +46,7 @@ export default function ConservationStatus() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-orange-100 border border-orange-300 rounded-full px-4 py-2 mb-6">
@@ -66,6 +67,7 @@ export default function ConservationStatus() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 md:p-12 border-2 border-pink-100 shadow-2xl shadow-pink-200/30 mb-12"
         >
           <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
@@ -124,8 +126,8 @@ export default function ConservationStatus() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.03 }}
+                transition={{ delay: index * 0.08, duration: 0.4, ease: "easeOut" }}
+                whileHover={{ scale: 1.03, transition: { duration: 0.25 } }}
               >
                 <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 border-2 border-pink-100 shadow-2xl shadow-pink-200/30 h-full hover:border-pink-300 transition-all">
                   <motion.div
@@ -153,6 +155,7 @@ export default function ConservationStatus() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="bg-gradient-to-br from-red-500 to-pink-600 rounded-3xl p-8 md:p-12 text-white shadow-glow-pink-strong"
         >
           <div className="max-w-4xl mx-auto">
