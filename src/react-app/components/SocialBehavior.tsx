@@ -128,7 +128,7 @@ export default function SocialBehavior() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-pink-200 via-rose-200 to-pink-300 rounded-2xl relative overflow-hidden">
+              <div className="aspect-square bg-gradient-to-br from-green-400 via-blue-300 to-green-500 rounded-2xl relative overflow-hidden">
                 {/* Animated dancing flamingos representation */}
                 <motion.div
                   className="absolute inset-0 flex items-center justify-center"
@@ -145,7 +145,7 @@ export default function SocialBehavior() {
                     {[...Array(9)].map((_, i) => (
                       <motion.div
                         key={i}
-                        className="w-8 h-16 bg-white/40 rounded-full"
+                        className="w-8 h-16 bg-white/100 rounded-full"
                         animate={{
                           scaleY: [1, 1.2, 1],
                           opacity: [0.4, 0.6, 0.4],
